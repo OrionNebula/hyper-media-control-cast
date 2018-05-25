@@ -1,0 +1,37 @@
+{
+  "name": "hyper-media-control-cast",
+  "version": "0.1.0",
+  "description": "Extends hyper-media-control with support for Google Cast devices.",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "standard ./src/**.js | snazzy",
+    "prebuild": "npm run lint && rimraf ./dist",
+    "build": "babel src -d dist",
+    "prepublishonly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrionNebula/hyper-media-control-cast"
+  },
+  "keywords": [
+    "music",
+    "hyper-media-control",
+    "hyper",
+    "hyperterm",
+    "chromecast"
+  ],
+  "author": "Olivia Trewin",
+  "license": "MIT",
+  "dependencies": {
+    "bonjour": "^3.5.0",
+    "castv2-client": "^1.2.0",
+    "hyper-plugin-extend": "1.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "rimraf": "^2.6.2",
+    "snazzy": "^7.1.1",
+    "standard": "^11.0.1"
+  }
+}
